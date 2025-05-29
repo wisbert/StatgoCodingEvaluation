@@ -1,25 +1,56 @@
 "use client";
 
-import { ModiferChooser } from "@/components";
+import { Chooser } from "@/components";
 import { calculateCodePrice } from "@/utilities/calculateCodePrice";
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const Calculator = () => {
-  const [code, setCode] = useState<Code>();
-  const [modifiers, setModifiers] = useState<Modifier[]>([]);
+  const [codes, setCode] = useState<Code[]>([]);
+  const [selectedCodes, setSelectedCodes] = useState<(Code | null)[]>([null]);
+  const [modifiers, setModifiers] = useState<(Modifier)[]>([]);
 
-  const fetchCode = async () => {
-    const response = await fetch(`/api/code`);
-    setCode(await response.json());
+  const fetchCodes = async () => {
+    const response = await fetch("api/codes");
+    const codesList = await response.json() as Code[];
+    const filteredCodes = codesList.map(code => ({
+      ...code,
+      modifiers: code.modifiers.filter(modifier => modifier.modifier_type !== "LMTS")
+    }))
+    setCode(filteredCodes);
+  };
+
+  const increamentRowIndex = (index: number, multiplier: number) => index + multiplier * 3
+
+  const handleModifierChange = (index: number, modifier: Modifier) => {
+    setModifiers(prev => {
+      const updatedModifiers = [...prev];
+      updatedModifiers[index] = modifier;
+
+      return updatedModifiers;
+    });
+  };
+
+  const handleCodeChange = (index: number, code: Code) => {
+    setSelectedCodes(prev => {
+      const updatedCodes = [...prev];
+      updatedCodes[index] = code;
+
+      if (index === updatedCodes.length - 1) {
+        updatedCodes.push(null)
+      }
+  
+
+      return updatedCodes;
+    });
   };
 
   useEffect(() => {
-    fetchCode();
+    fetchCodes();
   }, []);
 
   const finalPrice =
-    code && modifiers ? calculateCodePrice({ code, modifiers }) : 0;
+    codes && modifiers ? calculateCodePrice({ selectedCodes, modifiers }) : 0;
 
   return (
     <main className="">
@@ -56,23 +87,54 @@ const Calculator = () => {
         build a full encounter
       </p>
 
-      <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <ModiferChooser modifiers={code?.modifiers || []}>
+      {codes.length > 0 ? selectedCodes.map((selectedCode, index) => (
+      <Grid container spacing={2} paddingY={1} key={`${index}gridRow`}>
+         <Grid item xs={3}>
+          <Chooser<Code>
+            selectedItem={selectedCode}
+            items={codes || []}
+            onChange={(selected) => handleCodeChange(0 + index, selected)} 
+            getText={c => c.code}
+            >
+            Code
+        </Chooser>
+        </Grid>
+        {selectedCode && <Grid item xs={3}>
+          <Chooser<Modifier>
+            selectedItem={modifiers[increamentRowIndex(0, index)]}
+            items={selectedCode?.modifiers || []}
+            onChange={(selected) => handleModifierChange(increamentRowIndex(0, index), selected)} 
+            getText={m => m.modifier_code}
+            >
             Modifier 1
-          </ModiferChooser>
-        </Grid>
-        <Grid item xs={4}>
-          <ModiferChooser modifiers={code?.modifiers || []}>
+          </Chooser>
+        </Grid>}
+        {modifiers[increamentRowIndex(0, index)] && <Grid item xs={3}>
+          <Chooser<Modifier> 
+            selectedItem={modifiers[increamentRowIndex(1, index)]}
+            items={selectedCode?.modifiers || []}
+            onChange={(selected) => handleModifierChange(increamentRowIndex(1, index), selected)}
+            getText={m => m.modifier_code}
+          >
             Modifier 2
-          </ModiferChooser>
-        </Grid>
-        <Grid item xs={4}>
-          <ModiferChooser modifiers={code?.modifiers || []}>
+          </Chooser>
+        </Grid>}
+        {modifiers[increamentRowIndex(0, index)] && modifiers[increamentRowIndex(1, index)] && <Grid item xs={3}>
+          <Chooser<Modifier>
+            selectedItem={modifiers[increamentRowIndex(2, index)]}
+            items={selectedCode?.modifiers || []}
+            onChange={(selected) => handleModifierChange(increamentRowIndex(2, index), selected)}
+            getText={m => m.modifier_code}
+          >
             Modifier 3
-          </ModiferChooser>
-        </Grid>
+          </Chooser>
+        </Grid>}
       </Grid>
+      ))
+       : (
+        <p>Loading</p>
+      )}
+      
 
       <p>The Price is: {finalPrice}</p>
     </main>

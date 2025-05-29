@@ -1,0 +1,366 @@
+[
+  {
+    "id": 7622,
+    "code": "59.0 A",
+    "description": "Appendectomy with or without abscess",
+    "amount": 528.23,
+    "start_date": "2015-12-01 00:00:00",
+    "end_date": null,
+    "modifiers": [
+      {
+        "id": 27338,
+        "amount": 0.25,
+        "modifier_type": "BMI",
+        "modifier_code": "BMIANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27339,
+        "amount": 0.25,
+        "modifier_type": "BMI",
+        "modifier_code": "BMIANT",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      
+      },
+      {
+        "id": 27340,
+        "amount": 0.25,
+        "modifier_type": "BMI",
+        "modifier_code": "BMIPRO",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27343,
+        "amount": 18.39,
+        "modifier_type": "ROLE",
+        "modifier_code": "ANEST",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27345,
+        "amount": 50.97,
+        "modifier_type": "ROLE",
+        "modifier_code": "SAQS",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      
+      },
+      {
+        "id": 27346,
+        "amount": 280.58,
+        "modifier_type": "ROLE",
+        "modifier_code": "SSST",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27347,
+        "amount": 108.34,
+        "modifier_type": "VANE",
+        "modifier_code": "L30AN",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27348,
+        "amount": 108.34,
+        "modifier_type": "VANE",
+        "modifier_code": "L30AT",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27354,
+        "amount": 48.7,
+        "modifier_type": "SURC",
+        "modifier_code": "EV",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27355,
+        "amount": 116.83,
+        "modifier_type": "SURC",
+        "modifier_code": "NTAM",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27356,
+        "amount": 116.83,
+        "modifier_type": "SURC",
+        "modifier_code": "NTPM",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27357,
+        "amount": 48.7,
+        "modifier_type": "SURC",
+        "modifier_code": "WK",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null    
+      },
+      {
+        "id": 27358,
+        "amount": 1.5,
+        "modifier_type": "LMTS",
+        "modifier_code": "L40",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27359,
+        "amount": 1.5,
+        "modifier_type": "LMTS",
+        "modifier_code": "L40ANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27360,
+        "amount": 108.34,
+        "modifier_type": "LMTS",
+        "modifier_code": "L44ANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      
+      },
+      {
+        "id": 27361,
+        "amount": 1.25,
+        "modifier_type": "CAGE",
+        "modifier_code": "CAANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27362,
+        "amount": 1.25,
+        "modifier_type": "CAGE",
+        "modifier_code": "CAANT",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27363,
+        "amount": 1.25,
+        "modifier_type": "CAGE",
+        "modifier_code": "CASRG",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27364,
+        "amount": 0.75,
+        "modifier_type": "LVP",
+        "modifier_code": "LVP75",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 57245,
+        "amount": 184.21,
+        "modifier_type": "ROLE",
+        "modifier_code": "ANE",
+        "start_date": "2018-11-01 00:00:00",
+        "end_date": null
+        
+      }
+    ]
+  },
+    {
+    "id": 7623,
+    "code": "60.0 A",
+    "description": "Appendectomy with or without abscess",
+    "amount": 528.23,
+    "start_date": "2015-12-01 00:00:00",
+    "end_date": null,
+    "modifiers": [
+      {
+        "id": 27338,
+        "amount": 0.25,
+        "modifier_type": "BMI",
+        "modifier_code": "BMIANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27339,
+        "amount": 0.25,
+        "modifier_type": "BMI",
+        "modifier_code": "BMIANT",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      
+      },
+      {
+        "id": 27340,
+        "amount": 0.25,
+        "modifier_type": "BMI",
+        "modifier_code": "BMIPRO",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27343,
+        "amount": 18.39,
+        "modifier_type": "ROLE",
+        "modifier_code": "ANEST",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27345,
+        "amount": 50.97,
+        "modifier_type": "ROLE",
+        "modifier_code": "SAQS",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      
+      },
+      {
+        "id": 27346,
+        "amount": 280.58,
+        "modifier_type": "ROLE",
+        "modifier_code": "SSST",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27347,
+        "amount": 108.34,
+        "modifier_type": "VANE",
+        "modifier_code": "L30AN",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27348,
+        "amount": 108.34,
+        "modifier_type": "VANE",
+        "modifier_code": "L30AT",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27354,
+        "amount": 48.7,
+        "modifier_type": "SURC",
+        "modifier_code": "EV",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27355,
+        "amount": 116.83,
+        "modifier_type": "SURC",
+        "modifier_code": "NTAM",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27356,
+        "amount": 116.83,
+        "modifier_type": "SURC",
+        "modifier_code": "NTPM",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27357,
+        "amount": 48.7,
+        "modifier_type": "SURC",
+        "modifier_code": "WK",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null    
+      },
+      {
+        "id": 27358,
+        "amount": 1.5,
+        "modifier_type": "LMTS",
+        "modifier_code": "L40",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27359,
+        "amount": 1.5,
+        "modifier_type": "LMTS",
+        "modifier_code": "L40ANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27360,
+        "amount": 108.34,
+        "modifier_type": "LMTS",
+        "modifier_code": "L44ANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      
+      },
+      {
+        "id": 27361,
+        "amount": 1.25,
+        "modifier_type": "CAGE",
+        "modifier_code": "CAANE",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27362,
+        "amount": 1.25,
+        "modifier_type": "CAGE",
+        "modifier_code": "CAANT",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+      },
+      {
+        "id": 27363,
+        "amount": 1.25,
+        "modifier_type": "CAGE",
+        "modifier_code": "CASRG",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 27364,
+        "amount": 0.75,
+        "modifier_type": "LVP",
+        "modifier_code": "LVP75",
+        "start_date": "2015-12-01 00:00:00",
+        "end_date": null
+        
+      },
+      {
+        "id": 57245,
+        "amount": 184.21,
+        "modifier_type": "ROLE",
+        "modifier_code": "ANE",
+        "start_date": "2018-11-01 00:00:00",
+        "end_date": null
+        
+      }
+    ]
+  }
+]
