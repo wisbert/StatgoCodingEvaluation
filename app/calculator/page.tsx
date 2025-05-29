@@ -135,7 +135,7 @@ const Calculator = () => {
       )}
       
 
-      <p>The Price is: {finalPrice}</p>
+      <p>The Price is: {finalPrice.toFixed(2)}</p>
     </main>
   );
 };
