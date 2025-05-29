@@ -14,7 +14,7 @@ type ChooserProps<T extends { id: number }> = PropsWithChildren<{
   getText: (item: T) => string;
 }>;
 
-export const Chooser = <T extends { id: number }>({
+export const ItemSelect = <T extends { id: number }>({
   children,
   items,
   selectedItem,

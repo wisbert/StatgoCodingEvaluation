@@ -1,6 +1,6 @@
 "use client";
 
-import { Chooser } from "@/components";
+import { ItemSelect } from "@/components";
 import { calculateCodePrice } from "@/utilities/calculateCodePrice";
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -40,7 +40,6 @@ const Calculator = () => {
         updatedCodes.push(null)
       }
   
-
       return updatedCodes;
     });
   };
@@ -90,44 +89,44 @@ const Calculator = () => {
       {codes.length > 0 ? selectedCodes.map((selectedCode, index) => (
       <Grid container spacing={2} paddingY={1} key={`${index}gridRow`}>
          <Grid item xs={3}>
-          <Chooser<Code>
+          <ItemSelect<Code>
             selectedItem={selectedCode}
             items={codes || []}
             onChange={(selected) => handleCodeChange(0 + index, selected)} 
             getText={c => c.code}
             >
             Code
-        </Chooser>
+        </ItemSelect>
         </Grid>
         {selectedCode && <Grid item xs={3}>
-          <Chooser<Modifier>
+          <ItemSelect<Modifier>
             selectedItem={modifiers[increamentRowIndex(0, index)]}
             items={selectedCode?.modifiers || []}
             onChange={(selected) => handleModifierChange(increamentRowIndex(0, index), selected)} 
             getText={m => m.modifier_code}
             >
             Modifier 1
-          </Chooser>
+          </ItemSelect>
         </Grid>}
         {modifiers[increamentRowIndex(0, index)] && <Grid item xs={3}>
-          <Chooser<Modifier> 
+          <ItemSelect<Modifier> 
             selectedItem={modifiers[increamentRowIndex(1, index)]}
             items={selectedCode?.modifiers || []}
             onChange={(selected) => handleModifierChange(increamentRowIndex(1, index), selected)}
             getText={m => m.modifier_code}
           >
             Modifier 2
-          </Chooser>
+          </ItemSelect>
         </Grid>}
         {modifiers[increamentRowIndex(0, index)] && modifiers[increamentRowIndex(1, index)] && <Grid item xs={3}>
-          <Chooser<Modifier>
+          <ItemSelect<Modifier>
             selectedItem={modifiers[increamentRowIndex(2, index)]}
             items={selectedCode?.modifiers || []}
             onChange={(selected) => handleModifierChange(increamentRowIndex(2, index), selected)}
             getText={m => m.modifier_code}
           >
             Modifier 3
-          </Chooser>
+          </ItemSelect>
         </Grid>}
       </Grid>
       ))
